@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: student-0-flask
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/sofusalbertsen/argocd-katas'
+    path: quotes-flask/k8s
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: student-0
