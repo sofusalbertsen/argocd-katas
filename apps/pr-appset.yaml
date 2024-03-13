@@ -20,7 +20,7 @@ spec:
       requeueAfterSeconds: 180
   template:
     metadata:
-      name: 'todo-<NUMBER>-{{branch}}-{{number}}'
+      name: 'todo-0-{{branch}}-{{number}}'
     spec:
       project: "default"
       source:
